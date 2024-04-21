@@ -63,8 +63,8 @@ If there is anything that you want to say to correct or improve this script just
 (https://www.youtube.com/watch?v=m8C0Cq9Uv9o)
 
 # TODO:
-&rarr; Test folder creation and break if nor successfull
-&rarr; Add more checks if script is being successfull and stop if anything gone bad.
-&rarr; Fork the Kickstart repo to add the modifications to the init.lua file
-&rarr; Ask for USER and MAIL during the script
-&rarr; Norminette LSP???
+ * Test folder creation and break if nor successfull
+ * Add more checks if script is being successfull and stop if anything gone bad.
+ * Fork the Kickstart repo to prevent modification add the modifications to the init.lua file
+ * Ask for USER and MAIL during the script
+ * Norminette LSP???
