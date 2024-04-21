@@ -57,7 +57,7 @@ go-to-definition and more!)
 
 # Hope it worked for you and that you enjoy Neovim!
 
-If there is anything that you want to say to correct or improve this script just email me  : joao.a.barbosa@proton.me
+If there is anything that you want to say to correct or improve this script just file an issue in GitHub 
 
 **BONUS:** Check this video to understand better how to use Kickstart and Neovim by TJ DeVries that explains and guides you through the first steps of Kickstart with Nvim
 (https://www.youtube.com/watch?v=m8C0Cq9Uv9o)
