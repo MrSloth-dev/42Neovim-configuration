@@ -1,14 +1,12 @@
 #!/bin/zsh
-
-# TODO: test with creating the folder nvim instead of kickstart and check if folder exists.
+#cloning init.lua from Kickstart
 if [[ -d $HOME/.var/app/io.neovim.nvim/config/nvim]]; then
 #	rm -r $HOME/.var/app/io.neovim.nvim/config/nvim
 	echo "Folder already exists, please delete it"
 else
- # git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/nvim}" TODO: NEED TESTING
- git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/kickstart}"
- mv ${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/kickstart} ${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/nvim}
+git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/nvim}" TODO: NEED TESTING
 fi
+
 #Geting nvim to execute and autocomplete  NOTE :Make sure you have .zshrc, I recommend you install oh-my-zsh. https://ohmyz.sh/#install
 
 ZSHRC_FILE="$HOME/.zshrc"
