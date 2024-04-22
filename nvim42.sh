@@ -2,7 +2,7 @@
 
 if [ -d "$HOME/.var/app/io.neovim.nvim/config/nvim" ]; then
 	echo "Folder already exists, please delete it"
-#	rm -r $HOME/.var/app/io.neovim.nvim/config/nvim
+	echo "\nGo to ~/.var/app/io.neovim.nvim/config/ and delete /nvim/ folder"
 	exit 1
 else
  git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/nvim}" 
