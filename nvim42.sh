@@ -1,14 +1,13 @@
 #!/bin/zsh
 
-# TODO: test with creating the folder nvim instead of kickstart and check if folder exists.
-if [[ -d $HOME/.var/app/io.neovim.nvim/config/nvim]]; then
-#	rm -r $HOME/.var/app/io.neovim.nvim/config/nvim
+if [ -d "$HOME/.var/app/io.neovim.nvim/config/nvim" ]; then
 	echo "Folder already exists, please delete it"
+#	rm -r $HOME/.var/app/io.neovim.nvim/config/nvim
+	exit 1
 else
- # git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/nvim}" TODO: NEED TESTING
- git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/kickstart}"
- mv ${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/kickstart} ${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/nvim}
+ git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.var/app/io.neovim.nvim/config/nvim}" 
 fi
+#
 #Geting nvim to execute and autocomplete  NOTE :Make sure you have .zshrc, I recommend you install oh-my-zsh. https://ohmyz.sh/#install
 
 ZSHRC_FILE="$HOME/.zshrc"
@@ -39,4 +38,5 @@ awk 'NR==150 { print "\n-- Tab Settings for Norminette compliance\n\nvim.opt.tab
 echo "Header and tabstop are setup, Press <F1> in Normal Mode to Insert Header\n"
 
 echo "Make sure you edit your Username and e-mail in init.lua (Open Neovim - Press <Space>sn - search init.lua line 275)"
+
 echo "\n\nPlease reset your terminal"
